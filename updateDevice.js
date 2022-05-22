@@ -8,14 +8,10 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
     });
 
 // Find device on network
-    device.find()
-        .then(() => {
-            // Connect to device
-            device.connect();
-        })
-        .finally(() => {
-            device.disconnect();
-        });
+    device.find().then(() => {
+        // Connect to device
+        device.connect();
+    });
 
 // Add event listeners
     device.on('connected', () => {
