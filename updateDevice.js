@@ -4,6 +4,7 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
     const device = new TuyAPI({
         id: process.env.DEVICE_ID,
         key: process.env.DEVICE_KEY,
+        version: '3.3',
     });
 
 // Find device on network
