@@ -24,7 +24,7 @@ app.patch("/devices/:id", cors(), async function (req, res) {
     res.send('Worked!')
 })
 
-const PORT = 6666
+const PORT = process.env.PORT || 6789
 app.listen(PORT, () => {
     console.log(`Mixing it up on port ${PORT}`)
 })
