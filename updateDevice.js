@@ -1,11 +1,16 @@
 const TuyAPI = require('tuyapi');
 
 async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperature) {
+    let id = process.env.DEVICE_ID
+    let key = process.env.DEVICE_KEY
+
     const device = new TuyAPI({
-        id: process.env.DEVICE_ID,
-        key: process.env.DEVICE_KEY,
+        id: id,
+        key: key,
         version: '3.3',
     });
+
+    console.log(id, key)
 
 // Find device on network
     device.find().then(() => {
