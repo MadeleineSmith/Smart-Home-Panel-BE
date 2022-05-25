@@ -7,7 +7,7 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
     const device = new TuyAPI({
         id: id,
         key: key,
-        version: '3.3',
+        version: 3.3,
     });
 
     console.log(id, key)
@@ -21,6 +21,7 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
 // Add event listeners
     device.on('connected', () => {
         console.log('Connected to device!');
+
         device.set({
             multiple: true,
             data: {
@@ -29,6 +30,8 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
                 '3': brightness, // brightness
                 '4': colorTemperature // 1 = orange, 255 = blue white
             }
+        }).then(() => {
+            device.disconnect()
         })
     });
 
