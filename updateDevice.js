@@ -9,7 +9,7 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
         id: id,
         key: key,
         version: 3.3,
-        ip: ip,
+        // ip: ip,
     });
 
     console.log(id, key, ip)
