@@ -27,10 +27,10 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
         device.set({
             multiple: true,
             data: {
-                '1': true,
-                '2': 'white',
-                '3': brightness, // brightness
-                '4': colorTemperature // 1 = orange, 255 = blue white
+                '20': true,
+                '21': 'white',
+                '22': brightness,      // brightness 10 -> 1000
+                '23': colorTemperature // colorTemp 0 -> 1000
             }
         }).then(() => {
             device.disconnect()
