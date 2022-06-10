@@ -1,6 +1,6 @@
-const TuyAPI = require('tuyapi');
+const TuyAPI = require("tuyapi");
 
-async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperature) {
+const updateDevice = async (deviceId, deviceKey, IP, brightness, colorTemperature) => {
     let id = process.env.DEVICE_ID
     let key = process.env.DEVICE_KEY
     let ip = process.env.DEVICE_IP
@@ -51,4 +51,6 @@ async function updateDevice(deviceId, deviceKey, IP, brightness, colorTemperatur
     }, 10000);
 }
 
-module.exports.updateDevice = updateDevice
+module.exports = {
+    updateDevice
+}
