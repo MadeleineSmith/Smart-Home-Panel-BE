@@ -1,10 +1,12 @@
 const {deviceService} = require("../services")
 
 const handlePatch = async (req, res, next) => {
-    const brightness = req.body.brightness
-    const colorTemperature = req.body.colorTemperature
+    const {brightness, colorTemperature} = req.body
+    const internalDeviceId = req.query.id
 
-    await deviceService.updateDevice("i", "s", "s", brightness, colorTemperature);
+    const device = deviceService.getDevice(internalDeviceId)
+
+    await deviceService.updateDevice(device.id, device.key, device.ip, brightness, colorTemperature);
 
     res.end()
 }

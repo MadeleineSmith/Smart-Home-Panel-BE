@@ -1,26 +1,28 @@
 const TuyAPI = require("tuyapi");
 
-const updateDevice = async (deviceId, deviceKey, IP, brightness, colorTemperature) => {
-    let id = process.env.DEVICE_ID
-    let key = process.env.DEVICE_KEY
-    let ip = process.env.DEVICE_IP
+const getDevice = (internalDeviceId) => {
+    // The following would be swapped out with a call to a database to retrieve this info.
+    // However, this setup is not worth it as I currently only want to control *one* device.
 
+    return {
+        id: process.env.DEVICE_ID,
+        key: process.env.DEVICE_KEY,
+        ip: process.env.DEVICE_IP,
+    }
+}
+
+const updateDevice = async (deviceId, deviceKey, IP, brightness, colorTemperature) => {
     const device = new TuyAPI({
-        id: id,
-        key: key,
+        id: deviceId,
+        key: deviceKey,
         version: 3.3,
-        ip: ip
+        ip: IP
     });
 
-    console.log(id, key, ip)
-
-// Find device on network
     device.find().then(() => {
-        // Connect to device
         device.connect();
     });
 
-// Add event listeners
     device.on('connected', () => {
         console.log('Connected to device!');
 
@@ -45,12 +47,12 @@ const updateDevice = async (deviceId, deviceKey, IP, brightness, colorTemperatur
         console.log('Error!', error);
     });
 
-// Disconnect after 10 seconds
     setTimeout(() => {
         device.disconnect();
     }, 10000);
 }
 
 module.exports = {
-    updateDevice
+    getDevice,
+    updateDevice,
 }
