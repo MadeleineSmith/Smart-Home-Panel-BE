@@ -9,7 +9,7 @@ app.use(cors({
 }))
 
 app.patch("/devices/:id", async function (req, res) {
-    console.log("hit devices endpoint")
+    console.log("hit devices endpoint 😊")
 
     // todo add this back in after hosting
     // const deviceId = req.params.id
