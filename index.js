@@ -4,8 +4,11 @@ const updateDevice = require('./updateDevice');
 
 const app = express()
 app.use(express.json());
+app.use(cors({
+    origin: "*"
+}))
 
-app.patch("/devices/:id", cors(), async function (req, res) {
+app.patch("/devices/:id", async function (req, res) {
     console.log("hit devices endpoint")
 
     // todo add this back in after hosting
