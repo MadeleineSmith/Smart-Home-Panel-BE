@@ -8,7 +8,7 @@ const handlePatch = async (req, res, next) => {
 
     await deviceService.updateDevice(device.id, device.key, device.ip, brightness, colorTemperature);
 
-    res.end()
+    res.sendStatus(200)
 }
 
 module.exports = {
