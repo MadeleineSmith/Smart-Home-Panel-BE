@@ -42,4 +42,3 @@
     ```
 * My bulb has properties '22' and '23' for adjusting the brightness and color temperature. I don't believe this is standard - you might have to change these numbers within [deviceService.js](https://github.com/MadeleineSmith/smart-bulbs-be/blob/master/services/deviceService.js)
 * Likewise, for my bulb, brightness and color temperature exist on a scale of 1 to 1000. I don't believe there is a standard for this (I've seen it 1 to 255 as well) - so you might have to play around with the values you pass in to the PATCH request.
-* 
