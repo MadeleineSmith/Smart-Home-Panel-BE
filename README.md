@@ -56,6 +56,7 @@
     heroku create {{APP-NAME}}
     git push heroku
     ```
+* (You can also set it up to automatically deploy on push to GitHub)
 * Setting the values of the env vars is a bit more of a challenge than local development:
   * Use `heroku config:set NAME=VALUE` on the command line to set these
   * `DEVICE_ID` and `DEVICE_KEY` are the same as when running locally
