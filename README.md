@@ -74,7 +74,7 @@
 * For a Now TV router, the set-up instructions are as [follows](https://community.nowtv.com/t5/Setup-Performance/Port-Forwarding/m-p/552730/highlight/true#M7348)
 * Once port forwarding is set up correctly (you can use a site like [Port Checker](https://portchecker.co/check) to check), the value of the `DEVICE_IP` environment variable is {{WAN-ADDRESS}}:{{START-PORT-NUM}}
 
----
+<div style="page-break-after: always;"></div>
 
 ## Using a dynamic DNS service
 * However, the issue with using a WAN address for this environment variable is that this is likely to change periodically - which stops the application working. 
