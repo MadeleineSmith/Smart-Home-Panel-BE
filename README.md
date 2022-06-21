@@ -1,8 +1,5 @@
 # Smart Home Panel - BE repo
 
-![Smart Home Panel demo](./demo-giphy.gif)
-
-
 ## Background:
 * I wanted to build out a **website** to be able to control one of my smart bulbs in my home - instead of being reliant on the 'Smart Life' mobile app. This is the BE repo with the FE repo existing [here](https://github.com/MadeleineSmith/smart-home-panel-fe).
 * Although, my solution works exactly as intended, arguably a far easier solution would be to buy a Raspberry Pi and install the [Home Assistant OS](https://www.home-assistant.io/) on it. But hey ho, you live and learn. 
