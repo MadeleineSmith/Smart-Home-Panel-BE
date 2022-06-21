@@ -1,6 +1,6 @@
 # Smart Home Panel - BE repo
 
-<mark>Insert giphy/video of website in use<mark>
+![Smart Home Panel demo](./demo-giphy.mov)
 
 ---
 
