@@ -32,7 +32,7 @@
       DEVICE_KEY=xxxxxxxxxxxxxxxx;
       DEVICE_IP=xxx.xxx.xxx.xxx;
     ```
-  * `DEVICE_ID` and `DEVICE_KEY` are retrieved from the `tuya-cli wizard` command above. `DEVICE_IP` is retrieved from <mark>fill this in - this is private ip</mark>
+  * `DEVICE_ID` and `DEVICE_KEY` are retrieved from the `tuya-cli wizard` command above. `DEVICE_IP` is retrieved from logging on to your router to retrieve the private IP of the device.
 * Run `npm run start` to run the code
 * I'm changing the brightness and color temperature of my bulb by running a PATCH request to `/devices/dummy-device-id` e.g:
   * ```
